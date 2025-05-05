@@ -2,49 +2,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="KBS TechCare - Expert computer services including repair, assembly, software support, antivirus, and more.">
-    <title>KBS TechCare</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="KBS TechCare - Professional Computer Services in Repair, Software, Antivirus & More."/>
+  <title>KBS TechCare</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Orbitron', sans-serif; }
+    .hero-bg {
+      background: linear-gradient(to right, #0f172a, #1e293b);
+    }
+  </style>
 </head>
-<body>
-    <header>
-        <img src="kbs-logo.jpg" alt="KBS Logo" class="logo">
-        <h1>KBS TechCare</h1>
-        <p class="tagline">Your Trusted Partner in Computer Solutions</p>
-    </header>
-    <main>
-        <section class="slider">
-            <div class="slide active">Computer Repair Services</div>
-            <div class="slide">Custom PC Assembly</div>
-            <div class="slide">Software Support & Installation</div>
-            <div class="slide">Antivirus & Security Solutions</div>
-            <div class="slide">Games & Licensed Software Sales</div>
-        </section>
+<body class="text-white bg-slate-900">
 
-        <section class="form">
-            <h2>Request a Service</h2>
-            <form>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Describe your issue"></textarea>
-                <button type="submit">Submit</button>
-            </form>
-        </section>
-    </main>
-    <footer>
-        <p>Contact us on WhatsApp: <a href="https://wa.me/918481943692">8481943692</a></p>
-    </footer>
-    <script>
-        const slides = document.querySelectorAll(".slide");
-        let currentSlide = 0;
+  <!-- Header -->
+  <header class="hero-bg p-6 shadow-lg">
+    <div class="container mx-auto flex items-center justify-between">
+      <div class="flex items-center gap-4">
+        <img src="kbs-logo.jpg" alt="KBS Logo" class="w-16 h-16 rounded-xl border-2 border-blue-400"/>
+        <div>
+          <h1 class="text-3xl font-bold text-blue-400">KBS TechCare</h1>
+          <p class="text-sm text-slate-300">Your Trusted Partner in Computer Solutions</p>
+        </div>
+      </div>
+      <a href="https://wa.me/918481943692" target="_blank" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 transition">Chat on WhatsApp</a>
+    </div>
+  </header>
 
-        setInterval(() => {
-            slides[currentSlide].classList.remove("active");
-            currentSlide = (currentSlide + 1) % slides.length;
-            slides[currentSlide].classList.add("active");
-        }, 3000);
-    </script>
+  <!-- Hero Section -->
+  <section class="text-center py-20 px-4">
+    <h2 class="text-4xl font-bold text-blue-300 mb-4 animate-pulse">Complete Computer Services</h2>
+    <p class="max-w-xl mx-auto text-slate-300">From hardware repairs to antivirus, licensed software, and system builds — we cover everything with care and expertise.</p>
+  </section>
+
+  <!-- Services -->
+  <section class="bg-slate-800 py-16 px-4">
+    <h3 class="text-center text-3xl text-blue-300 font-semibold mb-10">Our Services</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div class="bg-slate-700 p-6 rounded-xl shadow-lg hover:scale-105 transition">
+        <h4 class="text-xl text-blue-200 mb-2">Computer Repair</h4>
+        <p class="text-slate-300">Diagnostics, hardware fixes, and performance upgrades for all systems.</p>
+      </div>
+      <div class="bg-slate-700 p-6 rounded-xl shadow-lg hover:scale-105 transition">
+        <h4 class="text-xl text-blue-200 mb-2">PC Assembly</h4>
+        <p class="text-slate-300">Custom PC builds optimized for gaming, business, or personal use.</p>
+      </div>
+      <div class="bg-slate-700 p-6 rounded-xl shadow-lg hover:scale-105 transition">
+        <h4 class="text-xl text-blue-200 mb-2">Software & Antivirus</h4>
+        <p class="text-slate-300">Installation and support for OS, applications, licensed antivirus & more.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-16 px-4">
+    <h3 class="text-center text-3xl text-blue-300 font-semibold mb-10">Testimonials</h3>
+    <div class="max-w-4xl mx-auto text-center text-slate-300 italic">
+      <p>"KBS TechCare fixed my PC in one day! Professional and fast service. Highly recommended!"</p>
+      <p class="mt-2 font-semibold text-blue-200">– Ramesh Sinha</p>
+    </div>
+  </section>
+
+  <!-- Contact Form -->
+  <section class="bg-slate-800 py-12 px-4">
+    <h3 class="text-center text-3xl text-blue-300 font-semibold mb-8">Request a Service</h3>
+    <form class="max-w-lg mx-auto flex flex-col gap-4">
+      <input type="text" placeholder="Your Name" class="p-3 rounded bg-slate-700 border border-slate-600 text-white" required>
+      <input type="email" placeholder="Your Email" class="p-3 rounded bg-slate-700 border border-slate-600 text-white" required>
+      <textarea placeholder="Describe your issue" class="p-3 rounded bg-slate-700 border border-slate-600 text-white" required></textarea>
+      <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white py-2 rounded">Submit</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center py-6 text-slate-500 text-sm bg-slate-900 border-t border-slate-700">
+    &copy; 2025 KBS TechCare. All rights reserved.
+  </footer>
 </body>
 </html>
